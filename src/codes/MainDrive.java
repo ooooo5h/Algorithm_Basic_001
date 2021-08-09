@@ -48,7 +48,7 @@ public class MainDrive {
 				for (Student student : studentList) {
 					
 					if(student.getName().equals(inputName)) {
-						System.out.println("해당 학생의 학번은 : " + student.getNo() + "입니다.");
+						System.out.println(String.format("%s번입니다.", student.getNo()));
 
 						containstudentName = true;
 					}					
