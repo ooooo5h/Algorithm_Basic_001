@@ -2,6 +2,7 @@ package codes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class MainDrive {
 	
@@ -37,12 +38,34 @@ public class MainDrive {
 			System.out.println(student.getNo());
 			
 		}
+			
 		
+//		y, n 입력을 받아야하는데, 
+//		반복문 안에서 만들면 메모리 낭비(반복문 돌때마다 스캐너가 생성됨)니까 반복문 밖에서 생성!
+		Scanner myScan = new Scanner(System.in);		
 		
+//		무한 루프를 돌리자
+		while(true) {
+			System.out.println("계속 검색을 하고 싶으면 y,  종료하고 싶으면 n을 입력하세요.");
+			String input = myScan.next();
+			
+			if(input.equals("y")) {
+//				입력한 값이 y면, 계속 돌고
+				
+			}
+			else if (input.equals("n")) {
+				break;
+//				입력한 값이 n이면, break; 탈출 후 
+			}			
+		}
 		
-		
-		
-		
+		System.out.println("프로그램을 종료합니다.");
+//		프로그램 종료합니다 메세지 띄우기.
+//		input == y 가 아닌 이유 
+//		참조형 변수(String)를 ==으로 비교하면, 
+//		두 변수에 적힌 메모리 주소가 같은가? 라는 질문으로 이해하기 때문에
+//		참조형 변수간의 동일 여부 비교는 equals를 쓰는게 정석임.
+	
 	}
 
 }
