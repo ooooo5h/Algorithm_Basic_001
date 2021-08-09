@@ -51,6 +51,7 @@ public class MainDrive {
 			
 			if(input.equals("y")) {
 //				입력한 값이 y면, 계속 돌고
+				System.out.println("검색을 시작합니다.");
 				
 			}
 			else if (input.equals("n")) {
