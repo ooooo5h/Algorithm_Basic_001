@@ -55,13 +55,24 @@ public class MainDrive {
 				
 //				학생의 이름을 입력했는데, 
 				String inputName = myScan.next();
+				
+//				학생 이름이 없습니다를 초기값으로 설정 - boolean으로
+				boolean containstudentName = false;
+				
+				
 				for (Student student : studentList) {
 					
 //					리스트에 있는 이름이라면, 해당 학생의 학번 출력
 					if(student.getName().equals(inputName)) {
 						System.out.println("해당 학생의 학번은 : " + student.getNo() + "입니다.");
-					}
-					
+//						리스트에 있는 이름이면 학번을 출력 후 불린값을 false로 변경
+						containstudentName = true;
+					}					
+				}
+				
+//				학생 이름이 없다 = 불린값이 false!! = 해당하는 학생 없다고 띄우기
+				if(!containstudentName) {
+					System.out.println("해당하는 학생 이름이 없습니다.");
 				}
 				
 			}
