@@ -71,6 +71,7 @@ public class MainDrive {
 				}
 				
 //				학생 이름이 없다 = 불린값이 false!! = 해당하는 학생 없다고 띄우기
+//				문제아니였음 다시실행하니까 문구 제대로 뜸
 				if(!containstudentName) {
 					System.out.println("해당하는 학생 이름이 없습니다.");
 				}
