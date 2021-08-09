@@ -53,6 +53,17 @@ public class MainDrive {
 //				입력한 값이 y면, 계속 돌고
 				System.out.println("검색을 시작합니다.");
 				
+//				학생의 이름을 입력했는데, 
+				String inputName = myScan.next();
+				for (Student student : studentList) {
+					
+//					리스트에 있는 이름이라면, 해당 학생의 학번 출력
+					if(student.getName().equals(inputName)) {
+						System.out.println("해당 학생의 학번은 : " + student.getNo() + "입니다.");
+					}
+					
+				}
+				
 			}
 			else if (input.equals("n")) {
 				break;
